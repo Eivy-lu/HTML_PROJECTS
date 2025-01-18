@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;900&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: Source Sans Pro;
+}
+
+/*background*/
+
+body{
+    background: #348cb2;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    background: url("../images/bg.jpg");
+    background-size: contain;
+    background-repeat: repeat-x;
+    height: 300px;
+    width: 7000px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    animation: bg 60s infinite-linear;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../images/overlay-pattern.png),url(../images/overlay.svg);
+    background: repeat no-repeat;
+    background-size: auto, cover;
+}
+
+
+@keyframes bg{
+    from {transform: translateX(0)}
+    to {transform: translateX(-3500)}
+}
+

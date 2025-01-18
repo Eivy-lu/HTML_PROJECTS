@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(pink, yellow);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+}
+
+h1 {
+    position: relative;
+    transition: 0.3s;
+    transition-delay: 0.1s;
+}
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 300%;
+    background: red;
+    left:-50%;
+    transition: 0.3s;
+    top: 150%;
+    z-index: -1;
+    opacity: 0;
+}
+
+h1:hover::before {
+    transform: translate(50px,-150px) rotate(90deg);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
